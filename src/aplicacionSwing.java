@@ -114,7 +114,7 @@ public class aplicacionSwing {
 //        ventanaMain.getContentPane().add(label);
         
         //CREAR OBJETO POLIGONO MODELO
-        //este objeto se lo pasamos panelModelo para dinujarlo
+        //este objeto se lo pasamos panelModelo para dinujarlo en el constructor de panelDibujo
  
         //Display the window.
         ventanaMain.pack();
