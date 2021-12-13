@@ -2,7 +2,12 @@ import javax.swing.*;
 import javax.swing.border.Border;   
 import java.awt.*;
 
+//DIBUJA en el label Pintar el poligono 
+//Panel dibujo necesita aplicacionSwing, panelDibuto recibe PoligonoModelo desde aplicacionSwing
+
 public class PanelDibujo extends JPanel{
+	
+	public PoligonoModelo poligonoModelo;
 	
 	/**Calcula los vértices para un polígono de número de lados n (comprendido entre PoligonoModelo.MINLADOS y PoligonoModelo.MAXLADOS)	 
 	 *  Se utilizan las coordenadas del panel (origen en la esquina superior izquierda) y coordenadas polares tomando como origen el centro	 
@@ -14,6 +19,10 @@ public class PanelDibujo extends JPanel{
 	 * @return Vértices del polígono en coordenadas del panel actual. 
 	 * int[0] es un array con n componentes donde se almacenan	 
 	 * las abcisas de los vértices del polígono. En int[1] se almacenan las ordenadas.	 */	
+	
+	public void PanelDibujo(PoligonoModelo polMod) {
+		poligonoModelo = polMod;
+	}
 		
 	private int[][] calcularVertices(int n){		
 		/* 		 */		
@@ -42,5 +51,17 @@ public class PanelDibujo extends JPanel{
 			}		
 		return result;	
 		}
+	
+	//Redefinir metodo paintComponent
+	
+	//public void paintComponent (Graphins g) {
+		//Tiene que pintar la figura
+	
+		//Primero borra su aera
+		//g.clearRect(0,0, this.getWidth(),this.getHeight());
+		//Ver caprturas de pantalla del ordenador - hay que añadir get y set
+		//int[][] vertinces = this.calcularVertices(pol.getNumberOfSides());
+	//g.drawPolygon(vertices[]);
+	//}
 
 }

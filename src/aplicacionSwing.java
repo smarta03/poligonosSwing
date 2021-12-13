@@ -113,6 +113,8 @@ public class aplicacionSwing {
 //        JLabel label = new JLabel("Hello World");
 //        ventanaMain.getContentPane().add(label);
         
+        //CREAR OBJETO POLIGONO MODELO
+        //este objeto se lo pasamos panelModelo para dinujarlo
  
         //Display the window.
         ventanaMain.pack();
