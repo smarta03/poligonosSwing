@@ -48,7 +48,9 @@
 /*
  * HelloWorldSwing.java requires no other files. 
  */
-import javax.swing.*;        
+import javax.swing.*;
+import javax.swing.border.Border;   
+import java.awt.*;
  
 public class aplicacionSwing {
     /**
@@ -58,19 +60,87 @@ public class aplicacionSwing {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("HelloWorldSwing");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame ventanaMain = new JFrame("Poligonos");
+        ventanaMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        JPanel panelMain = new JPanel();
+        
+        ventanaMain.getContentPane().add(panelMain, BorderLayout.NORTH);
+        
+        panelMain.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        
  
+        JPanel panelPintar = new JPanel();
+        
+        ventanaMain.getContentPane().add(panelPintar, BorderLayout.CENTER);
+        
+        panelPintar.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        
+        
+        JPanel panelEtiqueta = new JPanel();
+        
+        ventanaMain.getContentPane().add(panelEtiqueta, BorderLayout.SOUTH);
+        
+        panelEtiqueta.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+       
+        
+        
+        //Panel main
+        
+        JButton menos = new JButton();
+        JButton mas = new JButton();
+        
+        panelMain.add(menos);
+        panelMain.add(mas);
+        
+        JLabel label = new JLabel("Lados");
+        panelMain.add(label);
+        
+        JTextField lados = new JTextField("0");
+        panelMain.add(lados);
+        
+ 
+        
+        //Panel etiqueta
+        
+        //Metodo para validar el numero de lados del cuadro de texto lados
+        
+        String nombrePoligono = calcularNombrePol(lados);
+        
+        JLabel labEtiqueta = new JLabel("Cuadrado");
+        
         //Add the ubiquitous "Hello World" label.
-        JLabel label = new JLabel("Hello World");
-        frame.getContentPane().add(label);
+//        JLabel label = new JLabel("Hello World");
+//        ventanaMain.getContentPane().add(label);
+        
  
         //Display the window.
-        frame.pack();
-        frame.setVisible(true);
+        ventanaMain.pack();
+        ventanaMain.setVisible(true);
     }
  
-    public static void main(String[] args) {
+    private static String calcularNombrePol(JTextField lados) {
+		// TODO Auto-generated method stub
+    	switch(lados.getText()) {
+    	case "0": break;
+    	case "1": break;
+    	case "2": break;
+    	case "3": break;
+    	case "4": break;
+    	case "5": break;
+    	case "6": break;
+    	case "7": break;
+    	case "8": break;
+    	case "9": break;
+    	case "10": break;
+    	case "11": break;
+    	case "12": break;
+    	}
+    	
+		return null;
+	}
+
+	public static void main(String[] args) {
         //Schedule a job for the event-dispatching thread:
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
