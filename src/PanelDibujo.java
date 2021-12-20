@@ -20,6 +20,7 @@ public class PanelDibujo extends JPanel{
 	 * int[0] es un array con n componentes donde se almacenan	 
 	 * las abcisas de los vértices del polígono. En int[1] se almacenan las ordenadas.	 */	
 	
+	
 	public void PanelDibujo(PoligonoModelo polMod) {
 		poligonoModelo = polMod;
 	}
